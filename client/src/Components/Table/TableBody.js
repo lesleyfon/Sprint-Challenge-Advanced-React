@@ -9,6 +9,7 @@ function TableBody({ playerData }) {
                 {playerData.map(playerInfo => {
                    return <TableRow 
                             playerInfo = { playerInfo }
+                            key= {playerInfo.name}
                     />
                 })}
                 

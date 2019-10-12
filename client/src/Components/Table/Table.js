@@ -1,23 +1,24 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components';
 import TableHeader from './TableHeader';
 import TableBody from './TableBody';
 
-export default class Table extends Component {
-    render() {
-        return (
-            <>
-                <TableStyles  >  
-                    <TableHeader />
-                    <TableBody
-                        playerData = {this.props.playerData}
-                     />
-                </TableStyles>
-            </>
-        )
-    }
+const Table = (props ) => {
+
+    return (
+        <>
+            <TableStyles  >  
+                <TableHeader />
+                <TableBody
+                    playerData = { props.playerData}
+                    />
+            </TableStyles>
+        </>
+    )
+    
 }
 
+export default Table;
 const TableStyles = styled.table`
     font-family: arial, sans-serif;
     border-collapse: collapse;
